@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome to IRIS predictions</h1>
+    <h2>Please enter your flower measurements below:</h2>
+    <form action="/predict" method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="sepal_length">Sepal Length</label>
+                    </td>
+                    <td>
+                        <input type="text" id="sepal_length" name="sepal_length" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sepal_width">Sepal Width</label>
+                    </td>
+                    <td>
+                        <input type="text" id="sepal_width" name="sepal_width" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="petal_length">Petal Length</label>
+                    </td>
+                    <td>
+                        <input type="text" id="petal_length" name="petal_length" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="petal_width">Petal Width</label>
+                    </td>
+                    <td>
+                        <input type="text" id="petal_width" name="petal_width" required>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button type="submit" id="submit" name="submit">Prediction</button>
+    </form>
+{% endblock %}
